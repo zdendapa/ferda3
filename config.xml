@@ -17,6 +17,7 @@ version = "1.0.1">
 <gap:splash gap:density="ldpi" gap:platform="android" src="res/screen-ldpi-portrait.png" />
 <gap:splash gap:density="ldpi" gap:platform="android" src="res/screen-ldpi-landscape.png" />
 <plugin name="de.appplant.cordova.plugin.local-notification" spec="0.8.4" source="npm" />
+    <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" />
 <plugin name="cordova-plugin-device" />
 <gap:config-file platform="ios" parent="UIStatusBarHidden"><true/></gap:config-file>
 <gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance"><false/></gap:config-file>
