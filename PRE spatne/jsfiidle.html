@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dokument bez názvu</title>
+</head>
+
+<body>
+<p>
+  <input id="vstup" type="number" onchange="odstran(),vytvor()"/>
+  <input type="button" onclick="odstran()" value="odstran" />
+
+</body>
+<script type="application/javascript">
+function odstran() { 
+var elems = document.getElementsByClassName('vyber'),
+        elem;
+    while(elems.length){
+        elem = elems.item(0);
+        elem.parentNode.removeChild(elem);
+    }
+}
+
+function vytvor() { 
+var counter = 1;
+var i = 1
+
+function foo()
+{
+	var countera = document.getElementById("vstup").value;
+	var sel = document.createElement("select");
+	var opt1 = document.createElement("option");
+	var opt2 = document.createElement("option");
+	var opt3 = document.createElement("option");
+	var opt4 = document.createElement("option");
+	var opt5 = document.createElement("option");
+	var opt6 = document.createElement("option");
+	var opt7 = document.createElement("option");
+
+
+sel.setAttribute("class", "vyber");
+sel.setAttribute("id", "m" + i);
+
+opt1.value = "Ležák sv. 10";
+opt1.text = "Ležák sv. 10";
+
+opt2.value = "Ležák tm. 11";
+opt2.text = "Ležák tm. 11";
+
+opt3.value = "Ležák sv. Premium 12°";
+opt3.text = "Ležák sv. Premium 12°";
+
+opt4.value = "MAX spec. sv. ležák 11°";
+opt4.text = "MAX spec. sv. ležák 11°";
+
+opt5.value = "7 kulí spec. polotm. ležák 13°";
+opt5.text = "7 kulí spec. polotm. ležák 13°";
+
+opt6.value = "d´Este spec. sv. ležák 15°";
+opt6.text = "d´Este spec. sv. ležák 15°";
+
+opt7.value = "Nealko pivo Ferdinand 0°";
+opt7.text = "Nealko pivo Ferdinand 0°";
+
+sel.add(opt1, null);
+sel.add(opt2, null);
+sel.add(opt2, null);
+sel.add(opt3, null);
+sel.add(opt4, null);
+sel.add(opt5, null);
+sel.add(opt6, null);
+sel.add(opt7, null);
+document.body.appendChild(sel);
+
+    if (counter < countera){
+		i++
+        counter++
+        window.setTimeout(foo, 10);
+    }
+}
+
+foo();
+
+}
+
+</script>
+</html>
